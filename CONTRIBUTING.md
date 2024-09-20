@@ -1,10 +1,10 @@
-# Contributing to CSC4360Project2
+# Contributing to Robotics Project Team 1 Project
 
-Welcome to CSC4360 Project2! We're thrilled to have you here. Your contributions are essential to making this project successful.
+Welcome to Robotics Project Team 1 Project! We're thrilled to have you here. Your contributions are essential to making this project successful.
 
 ## How to Contribute
 
-If you're interested in contributing to CSC4360 Project2, please follow these steps:
+If you're interested in contributing to Project Team 1 Project, please follow these steps:
 
 1. Fork the repository on GitHub.
 2. Clone your forked repository to your local machine.
@@ -25,7 +25,7 @@ Before submitting a PR, please ensure that your code adheres to the following gu
 
 ## Reporting Bugs
 
-If you encounter any bugs or issues while using CSC4360 Project2, please report them by [creating an issue](https://github.com/CSC4360Project2/project2/issues) on GitHub. Make sure to include as much detail as possible, including steps to reproduce the issue.
+If you encounter any bugs or issues while using Project Team 1 Project, please report them by [creating an issue](https://github.com/Robotics-Project-Team-1/Robotics-Project-Team-1/issues) on GitHub. Make sure to include as much detail as possible, including steps to reproduce the issue.
 
 ## Contact
 
@@ -33,7 +33,6 @@ If you have any questions or need further assistance, feel free to reach out to 
 
 ## License
 
-By contributing to CSC4360 Project2, you agree that your contributions will be licensed under the Apache License. See the [LICENSE](https://github.com/CSC4360Project2/project2/blob/main/LICENSE) file for more details.
+By contributing to Robotics Project Team 1 Project, you agree that your contributions will be licensed under the Apache License. See the [LICENSE](https://github.com/Robotics-Project-Team-1/Robotics-Project-Team-1/blob/main/LICENSE) file for more details.
 
-Thank you for your interest in contributing to CSC4360 Project2! We appreciate your help in making this project better for everyone.
-
+Thank you for your interest in contributing to Robotics Project Team 1! We appreciate your help in making this project better for everyone.
