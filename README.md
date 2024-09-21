@@ -81,7 +81,7 @@ This project is licensed under the [LICENSE](https://github.com/Robotics-Project
 
 ## Contact
 
-For any inquiries or suggestions regarding the Robotics Project Team 1 Project project, please contact:
+For any inquiries or suggestions regarding the Robotics Project Team 1 Project, please contact:
 
 - Boluwatife Owolabi: [bolu.owolabi12@gmail.com](mailto:bolu.owolabi12@gmail.com)
 - Meghana Coca: [mcoca4280@gmail.com](mailto:mcoca4280@gmail.com)
