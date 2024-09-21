@@ -64,9 +64,11 @@ Inspired by the capabilities of the Pepper robot, the goal of this project is to
 ### Installation:
 
 1. Clone the repository from GitHub.
-2. Install the necessary dependencies:
+2. Run the following commands:
    ```bash
-   npm install (for React dependencies)
+   cd Robotics-Project-Team-1
+   cd pepper
+   npm start
    ```
 
 ## Contributing
