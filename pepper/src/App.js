@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import './config/firebase.js';
+import './config/genkit.js';
 
 function App() {
   return (
