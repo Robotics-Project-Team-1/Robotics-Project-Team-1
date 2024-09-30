@@ -84,7 +84,7 @@ This project is licensed under the [LICENSE](https://github.com/Robotics-Project
 For any inquiries or suggestions regarding the Robotics Project Team 1 Project, please contact:
 
 - Boluwatife Owolabi: [bolu.owolabi12@gmail.com](mailto:bolu.owolabi12@gmail.com)
-- Meghana Coca: [mcoca4280@gmail.com](mailto:mcoca4280@gmail.com)
+- M. Coca: [mcoca1@student.gsu.edu](mailto:mcoca1@student.gsu.edu)
 - Bang Pham: [bangapham16@gmail.com](mailto:bangapham16@gmail.com)
 - Sophie Nguyen: [sophienguyen113@gmail.com](mailto:sophienguyen113@gmail.com)
 
