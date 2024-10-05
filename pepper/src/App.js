@@ -1,5 +1,5 @@
 import './App.css';
-import './config/firebase.js';
+import './firebase.js';
 import * as React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './containers/Home';
