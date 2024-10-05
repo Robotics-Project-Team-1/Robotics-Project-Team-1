@@ -1,9 +1,9 @@
-import './App.css';
-import './firebase.js';
+import "./App.css";
+import "./firebase.js";
 import * as React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from './containers/Home';
-import Chat from './containers/Chat';
+import Home from "./containers/Home";
+import Chat from "./containers/Chat";
 
 function App() {
   return (

@@ -1,46 +1,46 @@
-body{
-  background-color: #008BE8;
+body {
+  background-color: #008be8;
 }
-.home-title{
+.home-title {
   font-size: 96px !important;
   line-height: 84px !important;
 }
 @media screen and (max-width: 992px) {
-  .home-title{
+  .home-title {
     font-size: 48px !important;
     line-height: 40px !important;
     text-align: center;
   }
 }
-.text-primary{
-  color: #008BE8 !important;
+.text-primary {
+  color: #008be8 !important;
 }
-.text-secondary{
+.text-secondary {
   color: #003459 !important;
 }
-.text-dark{
-  color: #00171F !important;
+.text-dark {
+  color: #00171f !important;
 }
-.btn-primary{
-  background-color: #008BE8 !important;
+.btn-primary {
+  background-color: #008be8 !important;
   font-weight: 700;
   color: white !important;
-  padding: .75rem 2rem .75rem 2rem;
+  padding: 0.75rem 2rem 0.75rem 2rem;
   border: 0;
   border-radius: 50px;
-  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   box-shadow: 0 16px 30px rgba(0, 139, 232, 0.25);
 }
 .btn-primary:hover {
   background-color: #35a4ee !important;
   transform: scale(1.02);
-  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   box-shadow: 0 30px 50px rgba(0, 139, 232, 0.25);
 }
-.hover{
-  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+.hover {
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
-.hover:hover{
+.hover:hover {
   transform: scale(1.02);
-  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }

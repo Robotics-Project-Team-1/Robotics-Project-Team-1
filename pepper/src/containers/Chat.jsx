@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
-  const [inputMessage, setInputMessage] = useState('');
-
+  const [inputMessage, setInputMessage] = useState("");
 
   const handleSendMessage = (e) => {
     e.preventDefault();
-    if (inputMessage.trim() !== '') {
-      setMessages([...messages, { text: inputMessage, sender: 'You' }]);
-      setInputMessage('');
+    if (inputMessage.trim() !== "") {
+      setMessages([...messages, { text: inputMessage, sender: "You" }]);
+      setInputMessage("");
     }
   };
 

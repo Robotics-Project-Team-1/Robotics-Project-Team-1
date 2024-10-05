@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "robotics-project-team-1",
   storageBucket: "robotics-project-team-1.appspot.com",
   messagingSenderId: "151414573057",
-  appId: "1:151414573057:web:57d44a7eaf477af789d800"
+  appId: "1:151414573057:web:57d44a7eaf477af789d800",
 };
 
 // Initialize Firebase
