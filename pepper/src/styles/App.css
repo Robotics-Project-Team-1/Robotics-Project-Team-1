@@ -1,3 +1,9 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh !important;
+  padding: 2.5rem;
+}
 body {
   background-color: #008be8;
 }
@@ -11,6 +17,10 @@ body {
     line-height: 40px !important;
     text-align: center;
   }
+}
+.bg-primary{
+  background-color: #008be8 !important;
+
 }
 .text-primary {
   color: #008be8 !important;
@@ -43,4 +53,50 @@ body {
 .hover:hover {
   transform: scale(1.02);
   transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.hover-btn {
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.hover-btn:hover {
+  background-color: #ededed !important;
+  transform: scale(1.02);
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.hover-btn-2 {
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.hover-btn-2:hover {
+  background-color: #5BBDFF !important;
+  transform: scale(1.02);
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.chatbox{
+  border-radius: 25px;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .chatbox {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+}
+.form-control{
+  border: 1px solid #008be8 !important;
+
+}
+.point{
+  cursor:  pointer !important;
+}
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+.hidescroll{
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
