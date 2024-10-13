@@ -4,13 +4,10 @@ import pepperImg from "../assets/images/pepper.svg";
 
 const Home = () => {
   return (
-    <div
-      className="container-fluid  d-flex flex-column justify-content-center align-items-center overflow-y-hidden"
-      style={{ height: "100vh" }}
-    >
+    <div className="container-fluid  d-flex flex-column justify-content-center align-items-center overflow-y-hidden hide-scroll ">
       <div
-        className="container-fluid bg-white rounded-5 p-lg-5 shadow-lg "
-        style={{ width: "95vw", height: "90vh" }}
+        className="container-fluid bg-white rounded-5 p-lg-5 "
+        style={{ height: "90vh" }}
       >
         <div className="row">
           <div className="col-lg-5 order-lg-1 order-2 d-flex  justify-content-center">
