@@ -86,11 +86,93 @@ const Chat = () => {
   return (
     <>
       {/* mobile header */}
+      <nav
+        className="d-flex d-md-none navbar navbar-expand-lg bg-body-tertiary sticky-top justify-content-between align-items-center p-3 px-4"
+        style={{ borderBottom: "1px solid rgba(0,0,0,.15)", height: "65px" }}
+      >
+        <div className="d-flex align-items-center">
+          <FontAwesomeIcon
+            className="hover me-3"
+            size="xl"
+            icon={faBars}
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            role="button"
+            aria-controls="offcanvasExample"
+          />
+          <img src={pepperLogo} alt="" />
+          <h3
+            className="ms-3 me-2 m-0 text-truncate"
+            style={{ maxWidth: "50vw" }}
+          >
+            {currentThread?.messages.length > 0
+              ? currentThread.title
+              : "New Chat"}
+          </h3>
+        </div>
+        <FontAwesomeIcon
+          className="hover"
+          size="xl"
+          onClick={handleCreateNewThread}
+          icon={faEdit}
+        />
+      </nav>
 
       <div className="container-fluid d-flex flex-column overflow-hidden chatbox bg-white shadow-lg">
         <div className="row h-100 w-100 ">
           {/* sidebar (mobile) */}
-          
+          <div
+            className="offcanvas offcanvas-start"
+            tabIndex="-1"
+            id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel"
+          >
+            <div className="offcanvas-header">
+              <img
+                src={pepperLogo}
+                alt="Pepper Logo"
+                style={{ width: "40px", height: "40px" }}
+              />
+              <h3 className="ms-2">Pepper</h3>
+              <button
+                id="close-sidebar"
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="offcanvas-body">
+              <p className="fs-6 fw-semibold text-secondary">Chat History</p>
+              <div className="flex-grow-1">
+                {threads.length === 0 && (
+                  <div className="d-flex justify-content-center align-items-center h-100">
+                    <h4>No chats available</h4>
+                  </div>
+                )}
+
+                <ul className="list-unstyled">
+                  {reversedThreads.map((thread) => (
+                    <li key={thread.id} className="mb-2">
+                      <button
+                        className={`btn rounded-4 w-100 py-3 text-start text-truncate ${
+                          currentThread?.id === thread.id
+                            ? "bg-primary text-white hover-btn-2 fw-semibold"
+                            : "hover-btn"
+                        }`}
+                        onClick={() => handleSelectThread(thread)}
+                        style={{ maxWidth: "100%" }}
+                      >
+                        {thread.messages.length > 0
+                          ? thread.messages[0].text
+                          : "New Chat"}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>         
 
           {/* sidebar (desktop) */}
           <div
