@@ -8,13 +8,9 @@ const llm = new ChatOllama({
   //maxRetries: 2,
   // other params...
 });
-console.log("model instantiate");
+console.log("model instantiated");
 
 //--sample invocation
-// const inputText = "Ollama is an AI company that ";
-
-// const completion = await llm.invoke(inputText);
-// completion;
 
 // const aiMsg = await llm.invoke([
 //     [
@@ -26,29 +22,56 @@ console.log("model instantiate");
 // console.log("msg invocation");
 // aiMsg;
 // console.log(aiMsg.content);
-//"Ollama" gives undefined response; "ChatOllama" responds "Je aime le programmation.""
+//"Ollama" gives undefined response; "ChatOllama" responds "Je aime le programmation."
 
 // with chain
-// import { ChatPromptTemplate } from "@langchain/core/prompts";
-
+// import { ChatPromptTemplate, MessagesPlaceholder } from "@langchain/core/prompts";
 // const prompt = ChatPromptTemplate.fromMessages([
 //   [
 //     "system",
-//     "You are a helpful assistant that translates {input_language} to {output_language}.",
+//     "You are a helpful assistant that answers the user's questions.",
 //   ],
 //   ["human", "{input}"],
 // ]);
 
 // const chain = prompt.pipe(llm);
 // const aimsg = await chain.invoke({
-//   input_language: "English",
-//   output_language: "German",
 //   input: "I love programming.",
+//   chat_history: 
 // });
 // console.log(aimsg);
 
 
 //Message History
 
+// import {
+//   START,
+//   END,
+//   MessagesAnnotation,
+//   StateGraph,
+//   MemorySaver,
+// } from "@langchain/langgraph";
+import { ChatPromptTemplate, MessagesPlaceholder } from "@langchain/core/prompts";
+const chatHistory = [];
 
-import { ChatPromptTemplate } from "@langchain/core/prompts";
+//sample history
+// const chatHistory = [
+//  new HumanMessage("My name is Bob"),
+// ];
+
+const prompt = ChatPromptTemplate.fromMessages([
+  [
+    "system",
+    "You are a helpful assistant that answers the user's questions.",
+  ],
+  new MessagesPlaceholder("chat_history"),  //converts arr of msg to strings
+  ["human", "{input}"],
+]);
+
+const chain = prompt.pipe(llm);
+const aimsg = await chain.invoke({
+  input: "What is my name?",
+  chat_history: chatHistory,
+});
+console.log(aimsg);
+//when response is received, append human msg + ai msg to chat history
