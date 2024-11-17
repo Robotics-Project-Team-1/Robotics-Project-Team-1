@@ -14,6 +14,31 @@ from dotenv import load_dotenv, find_dotenv
 from langchain.document_loaders import PyPDFLoader
 from langchain.document_loaders import Docx2txtLoader
 from langchain.document_loaders import TextLoader
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+
+#REST API
+app = Flask(__name__)
+
+#ex call
+@app.route('/hello')  
+def hello():  
+    return 'Hello, World!'
+
+# accept file upload in debug menu
+@app.route('/file_upload', methods=['POST'])
+def upload_file():
+    if file not in request.files:
+        return jsonify({'error': 'no file part'})
+    
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error':'no file selected'})
+    if file:
+        load_document(file)
+#TODO: receive user input, send ai message (as stream?)
+@app.route('/sendmsg', methods=['GET','POST'])  #GET- display ai response, POST-get user response and feed to model
+@app.route('/sendresponse') #combine into one?
 
 
 # Loading PDF, DOCX and TXT files as LangChain documents
@@ -65,6 +90,7 @@ def clear_history():
 
 
 if __name__ == "__main__":
+    app.run()
     # Loading the OpenAI api key from .env
     load_dotenv(find_dotenv(), override=True)
     st.subheader('Welcome to our Pepper Chatbot!')

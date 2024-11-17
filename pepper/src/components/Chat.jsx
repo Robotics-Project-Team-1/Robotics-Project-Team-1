@@ -7,6 +7,8 @@ import {
   faEdit,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
+import axios from 'axios';
+import DebugMenu from "./DebugMenu.jsx";
 
 const Chat = () => {
   const [threads, setThreads] = useState([]);
@@ -29,6 +31,21 @@ const Chat = () => {
     setCurrentThread(newThread);
   };
 
+
+  // fetch("/response",{
+  //   method: "POST",
+  //   body: JSON.stringify(data),
+  //   headers: {
+  //     "Content-Type":"application/json",
+  //   }
+  // })
+  //   .then((response) =>  response.json())
+  //   .then((resData) => {
+  //     //save to thread
+  //   })
+  //   .catch((err))
+
+  
   //send message
   const handleSendMessage = (e) => {
     e.preventDefault();
@@ -54,6 +71,7 @@ const Chat = () => {
       handlePepperReply(updatedThread);
     }
   };
+
   //handle pepper reply
   const handlePepperReply = (updatedThread) => {
     setTimeout(() => {
@@ -85,6 +103,7 @@ const Chat = () => {
 
   return (
     <>
+    <DebugMenu></DebugMenu>
       {/* mobile header */}
       <nav
         className="d-flex d-md-none navbar navbar-expand-lg bg-body-tertiary sticky-top justify-content-between align-items-center p-3 px-4"
