@@ -45,7 +45,7 @@ def chunk_data(data, chunk_size=256, chunk_overlap=20):
 
 # Create embeddings using OpenAIEmbeddings() and save them in a Chroma vector store
 def create_embeddings(chunks):
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(model= 'text-embedding-3-large')
     vector_store = Chroma.from_documents(chunks, embeddings)
     return vector_store
 
@@ -128,8 +128,9 @@ def set_custom_style():
         .stAlert p{
             color: #0039A6;
         }
-        .stMarkdown h3, p{
-            color: black
+
+        .stMainBlockContainer h3, p, li{
+            color: black !important
         }
         </style>
     """, unsafe_allow_html=True)
@@ -185,34 +186,51 @@ if __name__ == "__main__":
                 # Saving the vector store in the streamlit session state (to be persistent between reruns)
                 st.session_state.vs = vector_store
                 st.success('File uploaded, chunked and embedded successfully!')
+    with st.container():
+        # User's question text input widget
+        q = st.text_input('Please ask a question:')
 
-    # User's question text input widget
-    q = st.text_input('Please ask a question:')
+        if q: # If the user entered a question and hit enter
+            if 'vs' in st.session_state: # If there's the vector store (user uploaded, split and embedded a file)
+                vector_store = st.session_state.vs
+                #st.write(f'k: {k}')
+                answer = ask_and_get_answer(vector_store, q, k)
 
-    if q: # If the user entered a question and hit enter
-        if 'vs' in st.session_state: # If there's the vector store (user uploaded, split and embedded a file)
-            vector_store = st.session_state.vs
-            #st.write(f'k: {k}')
-            answer = ask_and_get_answer(vector_store, q, k)
+                # Text area widget for the LLM answer
+                #st.text_area('Chatbot answer: ', value=answer)
+                st.markdown("### Pepper's answer: \n" + answer)
 
-            # Text area widget for the LLM answer
-            #st.text_area('Chatbot answer: ', value=answer)
-            st.markdown("### Pepper's answer: \n" + answer)
+                st.divider()
 
-            st.divider()
+                # If there's no chat history in the session state, create it
+                # if 'history' not in st.session_state:
+                #     st.session_state.history = ''
 
-            # If there's no chat history in the session state, create it
-            if 'history' not in st.session_state:
-                st.session_state.history = ''
+                # # The current question and answer
+                # value = f'Q: {q} \nA: {answer}'
 
-            # The current question and answer
-            value = f'Q: {q} \nA: {answer}'
+                # st.session_state.history = f'{value} \n {"-" * 100} \n {st.session_state.history}'
+                # h = st.session_state.history
 
-            st.session_state.history = f'{value} \n {"-" * 100} \n {st.session_state.history}'
-            h = st.session_state.history
+                # # Text area widget for the chat history
+                # st.text_area(label='Chat History', value=h, key='history', height=400)
+                st.markdown('### Chat History: ')
+                # Initialize chat history
+                if "messages" not in st.session_state:
+                    st.session_state.messages = []
+                with st.container(key='messages', height=400):
+                    # Display chat messages from history on app rerun
+                    for message in st.session_state.messages:
+                        with st.chat_message(message["role"]):
+                            st.markdown(message["content"])
+                    st.chat_message("user").markdown(q)
+                    st.chat_message("assistant", avatar="./avatar.svg").markdown(answer)
+                    st.session_state.messages.append({"role": "user", "content": q})
+                    st.session_state.messages.append({"role": "assistant", "content": answer})
 
-            # Text area widget for the chat history
-            st.text_area(label='Chat History', value=h, key='history', height=400)
+                # with st.container(height=400, border=True):
+                #     st.text_area(label='Chat History', value=h, key='history', height=400)
+                    #st.write(h)
 
 
 
