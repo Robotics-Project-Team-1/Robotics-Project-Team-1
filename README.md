@@ -28,15 +28,15 @@ Inspired by the capabilities of the Pepper robot, the goal of this project is to
 - **Configurable Search Parameters:** Users can adjust chunk size and retrieval parameters, input their OpenAI API key, and customize document processing for more precise information retrieval.
 - **Specialized Handbook Assistant:** Specifically designed to help users navigate and understand the GSU Computer Science Graduate Handbook through an interactive, AI-powered chatbot interface.
 
-### Tech Stack:
+## Tech Stack:
 
 - **Front End:** Streamlit, HTML & CSS
 - **Back End:** Python
 - **LLM Integration:** LangChain
-- **PDF Parsing:** `pypdf`
+- **PDF Parsing:** pypdf
 - **LLM Models:** OpenAI GPT API integrated via `LangChain`
 - **Storage:** chromadb
-- **Git & GitHub** for collaborative development and version tracking.
+- **Version Control:** Git & GitHub
 - [GSU CS graduate handbook PDF file](https://drive.google.com/file/d/1KvNLtqjVvo0lc-GnyTFjyADFKE4Jiglb/view?usp=drive_link) for chatbot data.
 
 ## Contributing
