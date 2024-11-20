@@ -47,7 +47,6 @@ def chunk_data(data, chunk_size=256, chunk_overlap=20):
 def create_embeddings(chunks):
     embeddings = OpenAIEmbeddings()
     vector_store = Chroma.from_documents(chunks, embeddings)
-    vector_store.persist()
     return vector_store
 
 # Retrieving the answer from the vector store
@@ -120,6 +119,17 @@ def set_custom_style():
         /* Make number input labels white */
         section[data-testid="stSidebar"] .stNumberInput label {
             color: white !important;
+        }
+        
+        /* Main Chat Area Styling */
+        .stHeading h1{
+            color: black;
+        }
+        .stAlert p{
+            color: #0039A6;
+        }
+        .stMarkdown h3, p{
+            color: black
         }
         </style>
     """, unsafe_allow_html=True)
