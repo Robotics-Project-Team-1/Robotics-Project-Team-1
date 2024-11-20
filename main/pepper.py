@@ -73,6 +73,13 @@ if __name__ == "__main__":
     st.image('img/gsu.png')
     st.subheader('Welcome to our Pepper Chatbot!')
 
+    st.markdown("""
+        <style>
+        [data-testid="stSidebar"] {
+            background-color: #0039A6;
+        }
+        </style>
+    """, unsafe_allow_html=True)
     # Sidebar for user inputs
     with st.sidebar:
 
