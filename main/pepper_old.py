@@ -132,6 +132,7 @@ def set_custom_style():
         .stMainBlockContainer h3, p, li{
             color: black !important
         }
+        .st-emotion-cache-janbn0 { background-color: aliceblue !important; }
         </style>
     """, unsafe_allow_html=True)
 def display_logos():
@@ -224,7 +225,8 @@ if __name__ == "__main__":
                         with st.chat_message(message["role"]):
                             st.markdown(message["content"])
                     st.chat_message("user").markdown(q)
-                    st.chat_message("assistant", avatar="./avatar.svg").markdown(answer)
+                    st.chat_message("assistant").markdown(answer)
+                    #st.chat_message("assistant", avatar="./avatar.svg").markdown(answer)
                     st.session_state.messages.append({"role": "user", "content": q})
                     st.session_state.messages.append({"role": "assistant", "content": answer})
 
