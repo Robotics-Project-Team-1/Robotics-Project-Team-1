@@ -27,49 +27,16 @@ Inspired by the capabilities of the Pepper robot, the goal of this project is to
 - Feature 2
 - Feature 3
 
-## Requirements
-
-### API & Libraries:
-
-- **PDF Parsing:** `pdfminer`
-- **LLM Models:** OpenAI GPT API integrated via `LangChain`
-
-### Hosting & Storage:
-
-- **Storage:** Firebase
-- **Deployment:** Heroku
-
-### Version Control:
-
-- **Git & GitHub** for collaborative development and version tracking.
-
-### Hardware:
-
-- Development and presentation will be conducted using a laptop.
-- [GSU CS graduate handbook PDF file](https://drive.google.com/file/d/1KvNLtqjVvo0lc-GnyTFjyADFKE4Jiglb/view?usp=drive_link) for chatbot data.
-
 ### Tech Stack:
 
-- **Front End:** React, JavaScript
+- **Front End:** Streamlit, HTML & CSS
 - **Back End:** Python
 - **LLM Integration:** LangChain
-
-## Getting Started
-
-### Prerequisites:
-
-- Install ...
-- Set up ...
-
-### Installation:
-
-1. Clone the repository from GitHub.
-2. Run the following commands:
-   ```bash
-   cd Robotics-Project-Team-1
-   cd pepper
-   npm start
-   ```
+- **PDF Parsing:** `pypdf`
+- **LLM Models:** OpenAI GPT API integrated via `LangChain`
+- **Storage:** chromadb
+- **Git & GitHub** for collaborative development and version tracking.
+- [GSU CS graduate handbook PDF file](https://drive.google.com/file/d/1KvNLtqjVvo0lc-GnyTFjyADFKE4Jiglb/view?usp=drive_link) for chatbot data.
 
 ## Contributing
 
