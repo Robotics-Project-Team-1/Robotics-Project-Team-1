@@ -69,10 +69,15 @@ def clear_history():
 if __name__ == "__main__":
     # Load the OpenAI API key from .env
     load_dotenv(find_dotenv(), override=True)
+
+    st.image('img/gsu.png')
     st.subheader('Welcome to our Pepper Chatbot!')
 
     # Sidebar for user inputs
     with st.sidebar:
+
+        st.image('img/pepper.png')
+
         # File uploader widget
         uploaded_file = st.file_uploader('Please upload a file:', type=['pdf', 'docx', 'txt'])
 
