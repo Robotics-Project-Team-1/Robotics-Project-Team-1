@@ -24,8 +24,6 @@ Inspired by the capabilities of the Pepper robot, the goal of this project is to
 ## Key Features
 
 - **Document-based Q&A:** Supports uploading PDF, DOCX, and TXT files, creating vector embeddings, and using OpenAI's GPT-3.5-Turbo to answer questions about uploaded documents.
-- **Multi-thread Chat Interface:** Allows creating multiple chat threads, maintaining chat history, and navigating between different conversations with a custom blue-themed design.
-- **Configurable Search Parameters:** Users can adjust chunk size and retrieval parameters, input their OpenAI API key, and customize document processing for more precise information retrieval.
 - **Specialized Handbook Assistant:** Specifically designed to help users navigate and understand the GSU Computer Science Graduate Handbook through an interactive, AI-powered chatbot interface.
 
 ## Tech Stack:
