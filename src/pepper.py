@@ -80,6 +80,7 @@ if __name__ == "__main__":
         }
         </style>
     """, unsafe_allow_html=True)
+    
     # Sidebar for user inputs
     with st.sidebar:
 
