@@ -11,6 +11,66 @@ Welcome to our Robotics Project Team 1 Project - Salt with Pepper! This project 
 - **Bang Pham**
 - **Sophie Nguyen**
 
+## Running Application
+
+To run the Salt with Pepper locally on your machine, follow these steps:
+
+### Prerequisites
+
+1. **Python 3.10.0**  
+   Ensure Python 3.10.0 is installed on your system. This specific version is required for compatibility reasons.  
+   If you do not have it, download and install it from the [official Python website](https://www.python.org/downloads/).
+
+2. **Code Editor**  
+   Use any code editor you’re comfortable with. We recommend [Visual Studio Code](https://code.visualstudio.com/) for its robust features and seamless development experience.
+
+3. **OpenAI GPT API Key**  
+   Obtain an API key from [OpenAI's API page](https://platform.openai.com/signup/). This paid key is essential to access OpenAI's GPT services.
+
+### Steps
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/Robotics-Project-Team-1/Robotics-Project-Team-1.git
+
+   ```
+
+2. **Navigate to the Project Directory**:
+
+   ```bash
+   cd Robotics-Project-Team-1
+
+   ```
+
+3. **Open the Project in Your Code Editor**
+
+4. **Set Up the `.env` File**:
+   Navigate to the `src` folder and create a file named `.env`. Add your OpenAI API key in the following format:
+
+   ```bash
+   OPENAI_API_KEY="your_openai_api_key_here"
+
+   ```
+
+   Replace `your_openai_api_key_here` with the actual API key obtained from OpenAI.
+
+5. **Install Required Libraries**:
+   In the `src` folder, run the following command:
+
+   ```bash
+   cd src
+   pip3 install -r ./requirements.txt
+
+   ```
+
+6. **Run the Application**:
+
+   ```bash
+   streamlit run ./pepper.py
+
+   ```
+
 ## Problem Statement and Goal
 
 ### Problem Statement:
