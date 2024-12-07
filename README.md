@@ -17,14 +17,14 @@ To run the Salt with Pepper locally on your machine, follow these steps:
 
 ### Prerequisites
 
-1. **Python 3.10.0**  
+1. **Python 3.10.0**:  
    Ensure Python 3.10.0 is installed on your system. This specific version is required for compatibility reasons.  
    If you do not have it, download and install it from the [official Python website](https://www.python.org/downloads/).
 
-2. **Code Editor**  
+2. **Code Editor**:
    Use any code editor you’re comfortable with. We recommend [Visual Studio Code](https://code.visualstudio.com/) for its robust features and seamless development experience.
 
-3. **OpenAI GPT API Key**  
+3. **OpenAI GPT API Key**:
    Obtain an API key from [OpenAI's API page](https://platform.openai.com/signup/). This paid key is essential to access OpenAI's GPT services.
 
 ### Steps
