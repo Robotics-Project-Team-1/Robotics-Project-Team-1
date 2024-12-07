@@ -61,7 +61,7 @@ To run the Salt with Pepper locally on your machine, follow these steps:
 
 5. **Install Required Libraries**:
 
-   In the `src` folder, run the following command:
+   In the `src` folder, run the following commands:
 
    ```bash
    cd src
